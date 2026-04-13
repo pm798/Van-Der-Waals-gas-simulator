@@ -254,6 +254,9 @@ public:
     bool operator!=(const VanDerWaalsGas& other) const {
         return !(*this == other);
 }
+
+
+    // Оператор скалирования. Увеличивает объем и количество молей в заданное число раз, но не меняет состояние (T и P).
     VanDerWaalsGas& operator*=(double factor) {
         if (factor <= 0) {
             throw std::runtime_error("Scaling factor must be positive");
@@ -266,6 +269,7 @@ public:
         return *this;
     }
 
+    // Деление.
     VanDerWaalsGas& operator/=(double factor) {
         return (*this) *= (1.0 / factor);
     }
