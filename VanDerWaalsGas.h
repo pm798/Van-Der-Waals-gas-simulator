@@ -17,6 +17,8 @@ namespace GasData {
     extern const std::map<std::string, GasConstants> LOOKUP;
 }
 
+
+// Класс, описывающий газ Ван-Дер-Ваальса.
 class VanDerWaalsGas {
 private:
     std::string gas_name;
@@ -50,6 +52,9 @@ public:
     bool operator!=(const VanDerWaalsGas& other) const;
     VanDerWaalsGas& operator*=(double factor);
     VanDerWaalsGas& operator/=(double factor);
+
+    double getPressure() const { return pressure; }
+    double getTemperature() const { return temperature; }
 };
 
 #endif

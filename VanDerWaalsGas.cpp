@@ -1,5 +1,6 @@
 #include "VanDerWaalsGas.h"
 
+// Структура, в которой хранятся табличные данные.
 namespace GasData {
     const std::map<std::string, GasConstants> LOOKUP = {
         {"He", {0.00345, 0.0000237, 3}},
